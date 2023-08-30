@@ -1,11 +1,11 @@
-package com.bank.Bank.Service;
+package com.bank.bank.service;
 
-import com.bank.Bank.Model.AccountModel;
-import com.bank.Bank.Model.AccountTypeModel;
-import com.bank.Bank.Model.BankModel;
-import com.bank.Bank.Model.CustomerModel;
-import com.bank.Bank.Repository.AccountRepository;
-import com.bank.Bank.Service.AccountService;
+import com.bank.bank.model.AccountModel;
+import com.bank.bank.model.AccountTypeModel;
+import com.bank.bank.model.BankModel;
+import com.bank.bank.model.CustomerModel;
+import com.bank.bank.repository.AccountRepository;
+import com.bank.bank.service.impl.AccountServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -22,12 +22,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class AccountServiceTest {
+class AccountServiceImplTest {
     @Mock
     AccountRepository accountRepository;
 
     @InjectMocks
-    AccountService accountService;
+    AccountServiceImpl accountService;
 
     @Test
     void createAccount_If_Correct() {

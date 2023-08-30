@@ -1,10 +1,9 @@
-package com.bank.Bank.Service;
+package com.bank.bank.service;
 
-import com.bank.Bank.Model.AccountTypeModel;
-import com.bank.Bank.Model.BankModel;
-import com.bank.Bank.Model.CustomerModel;
-import com.bank.Bank.Repository.CustomerRepository;
-import com.bank.Bank.Service.CustomerService;
+import com.bank.bank.model.BankModel;
+import com.bank.bank.model.CustomerModel;
+import com.bank.bank.repository.CustomerRepository;
+import com.bank.bank.service.impl.CustomerServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -12,7 +11,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +20,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class CustomerServiceTest {
+class CustomerServiceImplTest {
     @Mock
     CustomerRepository customerRepository;
     @InjectMocks
-    CustomerService customerService;
+    CustomerServiceImpl customerService;
 
     @Test
     void createCustomer_If_Correct(){

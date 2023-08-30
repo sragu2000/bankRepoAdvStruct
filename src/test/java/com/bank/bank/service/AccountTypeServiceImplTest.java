@@ -1,8 +1,8 @@
-package com.bank.Bank.Service;
+package com.bank.bank.service;
 
-import com.bank.Bank.Model.AccountTypeModel;
-import com.bank.Bank.Repository.AccountTypeRepository;
-import com.bank.Bank.Service.AccountTypeService;
+import com.bank.bank.model.AccountTypeModel;
+import com.bank.bank.repository.AccountTypeRepository;
+import com.bank.bank.service.impl.AccountTypeServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -17,11 +17,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class AccountTypeServiceTest {
+public class AccountTypeServiceImplTest {
     @Mock
     AccountTypeRepository accountTypeRepository;
     @InjectMocks
-    AccountTypeService accountTypeService;
+    AccountTypeServiceImpl accountTypeService;
 
 
     @Test
@@ -33,6 +33,15 @@ public class AccountTypeServiceTest {
         assertEquals(newAccountType, response.getBody());
         verify(accountTypeRepository, times(1)).save(newAccountType);
     }
+
+//    public ResponseEntity<AccountTypeModel> createAccountType(AccountTypeModel accountTypeModel){
+//        try {
+//            AccountTypeModel saveAccountTypeModel = accountTypeRepository.save(accountTypeModel);
+//            return new ResponseEntity<>(saveAccountTypeModel, HttpStatus.CREATED);
+//        } catch (Exception e) {
+//            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//    }
 
     @Test
     void createAccountType_If_ThrowsError(){

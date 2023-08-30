@@ -1,7 +1,5 @@
-package com.bank.Bank.Model;
+package com.bank.bank.model;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,8 +14,6 @@ public class AccountTypeModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotNull(message = "Account type can't be null")
-    @NotBlank(message = "Account type can't be empty")
     @Column(name = "account_type")
     private String accountType;
 

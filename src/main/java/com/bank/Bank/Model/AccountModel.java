@@ -1,4 +1,4 @@
-package com.bank.Bank.Model;
+package com.bank.bank.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

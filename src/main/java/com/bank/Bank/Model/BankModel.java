@@ -1,4 +1,4 @@
-package com.bank.Bank.Model;
+package com.bank.bank.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,12 +12,8 @@ public class BankModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column(name = "name")
     private String name;
-
     @Column(name = "location")
     private String location;
-
-
 }
